@@ -1,0 +1,240 @@
+:root {
+    font-size: 15px;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #0E0E0E;
+    //background-image: radial-gradient(closest-side, rgb(255, 255, 255), rgba(235, 105, 78, 0)),
+    //radial-gradient(closest-side, rgb(250, 203, 203), rgba(243, 11, 164, 0)),
+    //radial-gradient(closest-side, rgb(237, 252, 202), rgba(254, 234, 131, 0)),
+    //radial-gradient(closest-side, rgb(197, 248, 241), rgba(170, 142, 245, 0)),
+    //radial-gradient(closest-side, rgb(206, 200, 243), rgba(248, 192, 147, 0));
+    background-size: 130vmax 130vmax, 80vmax 80vmax, 90vmax 90vmax, 110vmax 110vmax, 90vmax 90vmax;
+    background-position: -80vmax -80vmax, 60vmax -30vmax, 10vmax 10vmax, -30vmax -10vmax, 50vmax 50vmax;
+    background-repeat: no-repeat;
+    animation: 10s movement linear infinite;
+}
+body::after {
+    content: "";
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.content.sign-in {
+    width: 90vw;
+    height: 90vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: flex;
+    //overflow: hidden;
+    .box,.register-box {
+        width: 80vw;
+        height: 80vh;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        border-radius: 30px;
+        transform: translate(-50%, -50%);
+        display: flex;
+        border-color: white;
+        border-width: 3px;
+        border-style: solid;
+        .left {
+            //background-color: rgb(172, 198, 248);
+            width: 50%;
+            height: 100%;
+            //background-image: linear-gradient(-225deg, #2cd8d5 0%, #c5c1ff 50%, #ffbac3 100%);
+            background-size: 600%;
+            //animation: anime 20s linear infinite;
+            position: relative;
+            .block {
+                width: 70%;
+                height: 70%;
+                background-color: #82FFBB;
+                backdrop-filter: blur(13.5px);
+                border-radius: 20px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                .text {
+                    color: #000000;
+                    margin: 10% 0 0 15%;
+                    position: relative;
+                    .one-text {
+                        font-size: 50px;
+                        font-weight: 800;
+                        font-family: "jost", Times, serif;
+                        .triangle {
+                            width: 0px;
+                            height: 0px;
+                            border: 20px solid transparent;
+                            border-left-color: rgb(255, 255, 255);
+                            display: inline-block;
+                        }
+                        .maos {
+                            margin-right: -5px;
+                            display: inline-block;
+                            position: absolute;
+                            left: 30px;
+                        }
+                        div:last-child {
+                            color: rgb(22, 22, 76);
+                        }
+                    }
+                    .two-text {
+                        margin-top: 30px;
+                        font-size: 20px;
+                        font-family: "jost", Times, serif;
+                    }
+                }
+            }
+        }
+        .right {
+            //background: rgba(255, 255, 255, 0.6);
+            //border: 1px solid rgba(255, 255, 255, 0.18);
+            width: 50%;
+            height: 100%;
+
+            position: relative;
+            .login-box{
+                width: 60%;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                .title{
+                    //margin-bottom: 30px;
+                    .h1 {
+                        color:#ffffff;
+                        font-weight: 600;
+                        font-size: 50px;
+                    }
+                    .fuck{
+                        color: #ffffff;
+                    }
+                    span {
+                        color: #ffffff;
+                        display: block;
+                        margin-top: 10px;
+                    }
+                }
+                .login-form{
+                    .ant-form-item {
+                        margin-bottom: 20px;
+                        color:#ffffff;
+                        .ant-switch{
+                            background-color: #8C8C8C;
+                        }
+                        .ant-switch-checked {
+                            background-color: white;
+                        }
+                        .ant-input-password{
+                            border-radius: 30px;
+                        }
+                    }
+                    .form-item-label {
+                        font-weight: 600;
+                        //color: rgb(41, 40, 78);
+                        color:#ffffff;
+                    }
+                    #form-item{
+                        margin-bottom: 0px;
+                        .input{
+                            display: block;
+                            margin-top: 7px;
+                            width: 100%;
+                            height: 50px;
+                            border: 1px solid rgb(201, 200, 207);
+                            border-radius: 30px;
+                            padding: 10px;
+                            box-sizing: border-box;
+                            outline: none;
+                            font-size: 20px;
+                            font-weight: 200;
+                            &:hover {
+                                border: 1px solid rgb(155, 181, 247);
+                            }
+                        }
+                    }
+                    .login-btn {
+                        width: 100%;
+                        height: 60px;
+                        color: #000000;
+                        background-color: #7FEEFE;
+                        border-radius: 30px;
+                        border: 0;
+                        //margin-top: 20px;
+                        font-family: "jost", sans-serif;
+                        font-size: 20px;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .other-login {
+                    color: #ffffff;
+                    .other-login-wrapper{
+                        width: 50%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        .other-login-item {
+                            width: 100%;
+                            padding: 10px;
+                            background-color: #B58CF9;
+                            text-align: center;
+                            border-radius: 10px;
+                            cursor: pointer;
+                            font-family: "jost", serif;
+                            font-weight: 600;
+                            color: #000000;
+                            margin: 0 10px;
+                            transition: 0.4s;
+                            &:hover {
+                                //width: 100%;
+                                //height: 50%;
+                                background-color: #fcfcfc;
+                                //border: 1px solid rgb(255, 255, 255);
+                                box-shadow: -20px 10px 32px 1px rgba(182, 183, 185, 0.37);
+                            }
+                            .google-login {
+                                width: 30px;
+                                height: 30px;
+                                vertical-align: middle;
+                            }
+
+                            span {
+                                vertical-align: middle;
+                            }
+
+
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+@keyframes anime {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
